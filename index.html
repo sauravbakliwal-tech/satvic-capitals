@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Satvic Capitals Private Limited | Unlocking Private Market Access</title>
+<meta name="description" content="Satvic Capitals — research-led access to India's unlisted and pre-IPO equity markets for qualified and institutional investors.">
+<link rel="canonical" href="https://www.satviccapitals.com/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Satvic Capitals Private Limited">
+<meta property="og:description" content="Unlocking private market access — research-led coverage of India's unlisted and pre-IPO equity for qualified and institutional investors.">
+<meta property="og:url" content="https://www.satviccapitals.com/">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#122A22">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,340;0,9..144,440;0,9..144,560;1,9..144,440&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ivory:#F5F1E7;
+    --ivory-2:#EDE7D6;
+    --panel:#FCFAF3;
+    --pine:#122A22;
+    --pine-2:#0B1D17;
+    --brass:#9C7A34;
+    --brass-soft:#B79452;
+    --ink:#1E2019;
+    --slate:#565A4C;
+    --hair:rgba(18,42,34,0.14);
+    --hair-light:rgba(255,253,247,0.14);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ivory);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    font-size:15.5px;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    color:var(--pine-2);
+    margin:0;
+    font-weight:440;
+    letter-spacing:-0.005em;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    font-size:0.68rem;
+    font-weight:500;
+    color:var(--brass);
+  }
+  .wrap{max-width:1160px;margin:0 auto;padding:0 40px;}
+  a{color:inherit;}
+  ::selection{background:var(--brass-soft);color:#fff;}
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(245,241,231,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--hair);
+  }
+  .nav-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    padding:20px 40px;max-width:1160px;margin:0 auto;
+  }
+  .brand{display:flex;align-items:center;gap:13px;}
+  .brand svg{width:32px;height:32px;flex-shrink:0;}
+  .brand-text{line-height:1.1;}
+  .brand-text .name{font-family:'Fraunces',serif;font-size:1.02rem;color:var(--pine-2);letter-spacing:-0.01em;}
+  .brand-text .sub{font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--slate);}
+  nav.links{display:flex;gap:38px;font-size:0.82rem;font-weight:500;letter-spacing:0.01em;}
+  nav.links a{opacity:0.72;transition:opacity .2s;text-decoration:none;}
+  nav.links a:hover{opacity:1;}
+  .nav-cta{
+    border:1px solid var(--pine);color:var(--pine-2);
+    padding:10px 20px;font-size:0.8rem;font-weight:500;letter-spacing:0.01em;
+    text-decoration:none;transition:background .2s, color .2s;
+  }
+  .nav-cta:hover{background:var(--pine);color:var(--panel);}
+  @media (max-width:820px){nav.links{display:none;}}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;padding:110px 0 96px;border-bottom:1px solid var(--hair);}
+  .hero-rays{
+    position:absolute;right:-220px;top:50%;transform:translateY(-50%);
+    width:760px;height:760px;opacity:0.5;pointer-events:none;
+  }
+  .hero-inner{position:relative;z-index:2;max-width:660px;}
+  .hero .kicker{display:flex;align-items:center;gap:14px;margin-bottom:26px;}
+  .hero .kicker .rule{width:38px;height:1px;background:var(--brass);}
+  .hero h1{font-size:3.3rem;line-height:1.14;letter-spacing:-0.015em;font-weight:440;}
+  .hero h1 em{font-style:italic;font-weight:440;color:var(--brass);}
+  .hero p.lede{
+    font-size:1.06rem;line-height:1.68;color:var(--slate);margin-top:26px;max-width:540px;font-weight:400;
+  }
+  .hero-ctas{display:flex;gap:18px;margin-top:40px;flex-wrap:wrap;}
+  .btn-primary{
+    background:var(--pine);color:var(--panel);padding:15px 30px;
+    font-weight:500;font-size:0.86rem;text-decoration:none;letter-spacing:0.01em;display:inline-flex;align-items:center;gap:10px;
+    transition:background .2s;border:1px solid var(--pine);
+  }
+  .btn-primary:hover{background:var(--pine-2);}
+  .btn-ghost{
+    border:1px solid var(--hair);color:var(--pine-2);padding:15px 28px;
+    font-weight:500;font-size:0.86rem;text-decoration:none;letter-spacing:0.01em;transition:border-color .2s, background .2s;
+  }
+  .btn-ghost:hover{border-color:var(--pine);background:rgba(18,42,34,0.04);}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,auto);gap:0;margin-top:72px;max-width:640px;border-top:1px solid var(--hair);}
+  .hero-stats .stat{padding:22px 28px 0 0;}
+  .hero-stats .stat b{display:block;font-family:'Fraunces',serif;font-size:1.5rem;color:var(--pine-2);font-weight:440;}
+  .hero-stats .stat span{font-size:0.72rem;color:var(--slate);letter-spacing:0.02em;}
+  @media (max-width:760px){.hero-stats{grid-template-columns:repeat(2,auto);}}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:640px;margin-bottom:60px;}
+  .section-head h2{font-size:2rem;margin-top:14px;line-height:1.2;font-weight:440;}
+  .section-head p{color:var(--slate);margin-top:16px;line-height:1.68;font-size:0.98rem;}
+  .head-row{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:24px;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:64px;margin-top:8px;align-items:start;}
+  .about-grid p{font-size:0.98rem;color:var(--slate);line-height:1.75;margin-top:16px;max-width:520px;}
+  .fact-panel{border:1px solid var(--hair);background:var(--panel);}
+  .fact-row{display:flex;justify-content:space-between;gap:16px;padding:18px 24px;border-bottom:1px solid var(--hair);}
+  .fact-row:last-child{border-bottom:none;}
+  .fact-row b{font-size:0.8rem;font-weight:500;color:var(--slate);font-family:'IBM Plex Mono',monospace;letter-spacing:0.01em;}
+  .fact-row span{font-size:0.86rem;color:var(--pine-2);font-weight:500;text-align:right;}
+
+  /* ---------- ACCESS ---------- */
+  .access{background:var(--pine-2);color:var(--panel);border-bottom:1px solid var(--hair-light);}
+  .access .eyebrow{color:var(--brass-soft);}
+  .access h2{color:var(--panel);}
+  .access-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:8px;border-top:1px solid var(--hair-light);}
+  .access-card{padding:38px 40px 38px 0;border-right:1px solid var(--hair-light);}
+  .access-card:last-child{border-right:none;}
+  .access-card .num{font-family:'IBM Plex Mono',monospace;color:var(--brass-soft);font-size:0.72rem;letter-spacing:0.08em;}
+  .access-card h3{color:var(--panel);font-size:1.12rem;margin-top:20px;font-weight:500;font-family:'Inter',sans-serif;}
+  .access-card p{color:rgba(252,250,243,0.62);font-size:0.88rem;line-height:1.68;margin-top:12px;}
+  @media (max-width:820px){.access-grid{grid-template-columns:1fr;}.access-card{border-right:none;border-bottom:1px solid var(--hair-light);padding:32px 0;}.access-card:last-child{border-bottom:none;}}
+
+  /* ---------- COUNTERS TABLE ---------- */
+  .counter-table{width:100%;border-collapse:collapse;margin-top:44px;}
+  .counter-table thead th{
+    text-align:left;font-family:'IBM Plex Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;
+    text-transform:uppercase;color:var(--slate);font-weight:500;padding:0 16px 14px 0;
+    border-bottom:1px solid var(--hair);
+  }
+  .counter-table tbody tr{border-bottom:1px solid var(--hair);transition:background .15s;}
+  .counter-table tbody tr:hover{background:rgba(18,42,34,0.03);}
+  .counter-table td{padding:22px 16px 22px 0;vertical-align:top;}
+  .ct-name{font-family:'Fraunces',serif;font-size:1.06rem;color:var(--pine-2);font-weight:500;white-space:nowrap;}
+  .ct-sector{font-size:0.78rem;color:var(--slate);font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;white-space:nowrap;}
+  .ct-note{font-size:0.88rem;color:var(--slate);line-height:1.6;max-width:420px;}
+  .ct-status{font-size:0.68rem;font-family:'IBM Plex Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;color:var(--brass);white-space:nowrap;}
+  .ct-link{font-size:0.8rem;font-weight:500;color:var(--pine-2);text-decoration:none;border-bottom:1px solid var(--hair);white-space:nowrap;}
+  .ct-link:hover{color:var(--brass);border-color:var(--brass);}
+  @media (max-width:900px){
+    .counter-table thead{display:none;}
+    .counter-table, .counter-table tbody, .counter-table tr, .counter-table td{display:block;width:100%;}
+    .counter-table td{padding:4px 0;}
+    .counter-table tr{padding:20px 0;}
+    .ct-note{max-width:none;}
+  }
+
+  .disclaimer-box{
+    margin-top:48px;border:1px solid var(--hair);background:var(--panel);
+    border-left:2px solid var(--brass);padding:26px 30px;
+  }
+  .disclaimer-box .eyebrow{margin-bottom:10px;display:block;}
+  .disclaimer-box p{font-size:0.84rem;color:var(--slate);line-height:1.72;margin:0;}
+
+  /* ---------- RESEARCH ---------- */
+  .research{border-bottom:1px solid var(--hair);}
+  .research-grid{display:grid;grid-template-columns:0.85fr 1.15fr;gap:64px;margin-top:44px;align-items:start;}
+  .note-card{border:1px solid var(--hair);background:var(--panel);padding:34px;}
+  .note-card .note-tag{font-family:'IBM Plex Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--brass);}
+  .note-card h3{font-size:1.4rem;margin-top:16px;font-weight:440;line-height:1.25;}
+  .note-card .note-meta{font-family:'IBM Plex Mono',monospace;font-size:0.74rem;color:var(--slate);margin-top:10px;letter-spacing:0.01em;}
+  .note-card p.note-body{font-size:0.9rem;color:var(--slate);line-height:1.72;margin-top:18px;}
+  .note-card .note-cta{
+    margin-top:24px;display:inline-flex;align-items:center;gap:8px;font-size:0.82rem;font-weight:500;
+    color:var(--pine-2);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:2px;
+  }
+  .note-card .note-cta:hover{color:var(--brass);border-color:var(--brass);}
+  .ledger{border-top:1px solid var(--hair);}
+  .ledger-row{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding:22px 0;border-bottom:1px solid var(--hair);}
+  .ledger-col .lc-label{font-family:'IBM Plex Mono',monospace;font-size:0.66rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;display:block;}
+  .ledger-col.pro .lc-label{color:var(--pine);}
+  .ledger-col.con .lc-label{color:var(--brass);}
+  .ledger-col p{font-size:0.88rem;color:var(--ink);line-height:1.6;margin:0;font-weight:500;}
+  .ledger-col span.sub{display:block;font-size:0.82rem;color:var(--slate);font-weight:400;margin-top:4px;line-height:1.55;}
+  .ledger-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-bottom:14px;}
+  .ledger-head span{font-family:'Fraunces',serif;font-size:1rem;font-style:italic;color:var(--pine-2);}
+  @media (max-width:900px){.research-grid{grid-template-columns:1fr;gap:40px;}.ledger-row,.ledger-head{grid-template-columns:1fr;gap:14px;}}
+
+  /* ---------- PROCESS ---------- */
+  .process{background:var(--ivory-2);border-bottom:1px solid var(--hair);}
+  .process-row{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:24px;border-top:1px solid var(--hair);}
+  .p-step{padding:32px 28px 0 0;border-right:1px solid var(--hair);}
+  .p-step:last-child{border-right:none;}
+  .p-index{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--brass);letter-spacing:0.06em;}
+  .p-step h3{font-size:0.98rem;margin-top:18px;font-weight:500;font-family:'Inter',sans-serif;color:var(--pine-2);}
+  .p-step p{font-size:0.85rem;color:var(--slate);line-height:1.65;margin-top:10px;}
+  @media (max-width:820px){.process-row{grid-template-columns:1fr;}.p-step{border-right:none;border-bottom:1px solid var(--hair);padding:28px 0;}.p-step:last-child{border-bottom:none;}}
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;align-items:start;}
+  .contact-form{background:var(--panel);border:1px solid var(--hair);padding:40px;}
+  .field{margin-bottom:20px;}
+  .field label{display:block;font-size:0.74rem;font-weight:500;letter-spacing:0.03em;text-transform:uppercase;color:var(--slate);margin-bottom:8px;font-family:'IBM Plex Mono',monospace;}
+  .field input, .field select, .field textarea{
+    width:100%;padding:12px 0;border:none;border-bottom:1px solid var(--hair);
+    font-family:'Inter',sans-serif;font-size:0.96rem;background:transparent;color:var(--ink);border-radius:0;
+  }
+  .field textarea{resize:vertical;min-height:80px;}
+  .field input:focus, .field select:focus, .field textarea:focus{outline:none;border-color:var(--brass);}
+  .submit-btn{
+    width:100%;background:var(--pine);color:var(--panel);border:1px solid var(--pine);padding:16px;
+    font-weight:500;font-size:0.86rem;letter-spacing:0.02em;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:10px;
+    transition:background .2s;margin-top:8px;
+  }
+  .submit-btn:hover{background:var(--pine-2);}
+  .contact-side .eyebrow{margin-bottom:16px;display:block;}
+  .contact-side h2{font-size:1.85rem;font-weight:440;}
+  .contact-side p{color:var(--slate);margin-top:18px;line-height:1.68;}
+  .contact-detail{margin-top:36px;display:flex;flex-direction:column;gap:0;border-top:1px solid var(--hair);}
+  .cd-row{display:flex;justify-content:space-between;gap:14px;align-items:baseline;padding:18px 0;border-bottom:1px solid var(--hair);}
+  .cd-row b{display:block;font-size:0.86rem;font-weight:500;color:var(--pine-2);}
+  .cd-row span{font-size:0.86rem;color:var(--slate);font-family:'IBM Plex Mono',monospace;}
+  @media (max-width:900px){.contact-grid{grid-template-columns:1fr;gap:56px;}}
+
+  /* ---------- FOOTER ---------- */
+  footer{background:var(--pine-2);color:rgba(252,250,243,0.7);padding:56px 0 32px;}
+  .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:32px;border-bottom:1px solid var(--hair-light);}
+  .footer-brand{display:flex;align-items:center;gap:11px;}
+  .footer-brand span{font-family:'Fraunces',serif;color:var(--panel);font-size:1rem;font-weight:440;}
+  .footer-links{display:flex;gap:30px;font-size:0.82rem;}
+  .footer-links a{text-decoration:none;color:rgba(252,250,243,0.7);}
+  .footer-links a:hover{color:var(--brass-soft);}
+  footer .fine{font-size:0.76rem;margin-top:24px;line-height:1.75;color:rgba(252,250,243,0.4);}
+
+  /* ---------- WHATSAPP FLOAT ---------- */
+  .wa-float{
+    position:fixed;bottom:28px;right:28px;background:var(--pine);color:var(--panel);width:52px;height:52px;
+    border:1px solid rgba(255,255,255,0.16);
+    display:flex;align-items:center;justify-content:center;text-decoration:none;
+    box-shadow:0 10px 28px rgba(11,29,23,0.28);z-index:60;transition:background .2s;
+  }
+  .wa-float:hover{background:var(--pine-2);}
+
+  @media (max-width:600px){
+    .hero h1{font-size:2.3rem;}
+    .wrap{padding:0 22px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <svg viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#122A22" stroke-width="3.5"/><g stroke="#122A22" stroke-width="3.5" stroke-linecap="round"><line x1="50" y1="14" x2="50" y2="30"/><line x1="50" y1="70" x2="50" y2="86"/><line x1="14" y1="50" x2="30" y2="50"/><line x1="70" y1="50" x2="86" y2="50"/><line x1="24" y1="24" x2="35" y2="35"/><line x1="65" y1="65" x2="76" y2="76"/><line x1="76" y1="24" x2="65" y2="35"/><line x1="35" y1="65" x2="24" y2="76"/></g><circle cx="50" cy="50" r="10" fill="#9C7A34"/></svg>
+      <div class="brand-text">
+        <div class="name">Satvic Capitals</div>
+        <div class="sub">Private Limited</div>
+      </div>
+    </div>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#access">Approach</a>
+      <a href="#counters">Coverage</a>
+      <a href="#research">Research</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Request Access</a>
+  </div>
+</header>
+
+<section class="hero">
+  <svg class="hero-rays" viewBox="0 0 400 400" fill="none">
+    <circle cx="200" cy="200" r="120" stroke="#122A22" stroke-opacity="0.08" stroke-width="1.5"/>
+    <circle cx="200" cy="200" r="170" stroke="#122A22" stroke-opacity="0.06" stroke-width="1.5"/>
+    <g stroke="#122A22" stroke-opacity="0.1" stroke-width="2" stroke-linecap="round">
+      <line x1="200" y1="30" x2="200" y2="70"/>
+      <line x1="200" y1="330" x2="200" y2="370"/>
+      <line x1="30" y1="200" x2="70" y2="200"/>
+      <line x1="330" y1="200" x2="370" y2="200"/>
+      <line x1="90" y1="90" x2="118" y2="118"/>
+      <line x1="282" y1="282" x2="310" y2="310"/>
+      <line x1="310" y1="90" x2="282" y2="118"/>
+      <line x1="118" y1="282" x2="90" y2="310"/>
+    </g>
+    <circle cx="200" cy="200" r="26" fill="#9C7A34" fill-opacity="0.35"/>
+  </svg>
+  <div class="wrap">
+    <div class="hero-inner">
+      <div class="kicker"><div class="rule"></div><span class="eyebrow">For Qualified &amp; Institutional Investors</span></div>
+      <h1>Disciplined access to <em>India's private capital markets.</em></h1>
+      <p class="lede">Satvic Capitals is a research desk for unlisted and pre-IPO equity — built for family offices, HNIs, and institutions who require diligence and discretion before they require a quote.</p>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="#contact">Request Access</a>
+        <a class="btn-ghost" href="#counters">View Coverage Universe</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>25+</b><span>Counters under coverage</span></div>
+        <div class="stat"><b>8</b><span>Sectors tracked</span></div>
+        <div class="stat"><b>24 hrs</b><span>Desk response window</span></div>
+        <div class="stat"><b>Off-mkt</b><span>Demat settlement</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div>
+        <span class="eyebrow">About Satvic Capitals</span>
+        <h2 style="font-size:2rem;margin-top:14px;font-weight:440;line-height:1.2;">A focused desk for India's private equity markets.</h2>
+        <p>Satvic Capitals Private Limited facilitates information-sharing and introductions relating to unlisted and pre-IPO equity in India. We maintain research coverage on a working set of actively transacted counters and connect qualified and institutional investors with documented, off-market transfer pathways — supported end to end by a named desk contact rather than an automated platform.</p>
+      </div>
+      <div class="fact-panel">
+        <div class="fact-row"><b>Entity</b><span>Satvic Capitals Private Limited</span></div>
+        <div class="fact-row"><b>Type</b><span>Private Limited Company</span></div>
+        <div class="fact-row"><b>CIN</b><span>[Insert CIN]</span></div>
+        <div class="fact-row"><b>Registered Office</b><span>[Insert Registered Address]</span></div>
+        <div class="fact-row"><b>Primary Contact</b><span>+91 99303 16782</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="access" id="access">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Approach</span>
+      <h2>A private market deserves a private-banking standard of care.</h2>
+      <p>Most of India's fastest-growing enterprises trade privately for years before any public listing. We exist to make that period navigable — with the same rigour investors expect on the public markets.</p>
+    </div>
+    <div class="access-grid">
+      <div class="access-card">
+        <div class="num">01 — Timing</div>
+        <h3>Position ahead of the listing cycle</h3>
+        <p>Evaluate a business while it is still private, ahead of the valuation reset that a public listing often brings.</p>
+      </div>
+      <div class="access-card">
+        <div class="num">02 — Diligence</div>
+        <h3>Research over rumour</h3>
+        <p>Coverage is checked against filings, sector data, and desk-level deal flow — not grey-market chatter alone.</p>
+      </div>
+      <div class="access-card">
+        <div class="num">03 — Discretion</div>
+        <h3>A named point of contact</h3>
+        <p>No anonymous order books. Every enquiry is handled directly by our desk, with full documentation support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="counters">
+  <div class="wrap">
+    <div class="head-row">
+      <div class="section-head" style="margin-bottom:0;">
+        <span class="eyebrow">Coverage Universe</span>
+        <h2>Selected unlisted &amp; pre-IPO counters</h2>
+        <p>A working shortlist maintained from India's leading unlisted-share platforms and deal desks. Notes below are informational — see the disclosure beneath the table before acting on any of them.</p>
+      </div>
+    </div>
+
+    <table class="counter-table">
+      <thead>
+        <tr>
+          <th>Counter</th>
+          <th>Sector</th>
+          <th>Note</th>
+          <th>Status</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="ct-name">NSE India Ltd.</td>
+          <td class="ct-sector">Market Infra</td>
+          <td class="ct-note">India's largest exchange operator; one of the most consistently traded unlisted counters, kept in focus by recurring listing speculation.</td>
+          <td class="ct-status">Widely Held</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name">Metropolitan Stock Exchange</td>
+          <td class="ct-sector">Market Infra</td>
+          <td class="ct-note">India's third recognised exchange. Renewed interest follows recent capital-market reform and governance changes.</td>
+          <td class="ct-status">Reform-Linked</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name">Zepto (Kiranakart Technologies)</td>
+          <td class="ct-sector">Consumer Tech</td>
+          <td class="ct-note">Quick-commerce major with global institutional backing, closely tracked ahead of an anticipated public listing.</td>
+          <td class="ct-status">Pre-IPO</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name">Oravel Stays (OYO)</td>
+          <td class="ct-sector">Hospitality</td>
+          <td class="ct-note">Hospitality-technology platform that has remained on unlisted watchlists for several years as a recurring listing candidate.</td>
+          <td class="ct-status">Long-Tracked</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name">Polymatech Electronics</td>
+          <td class="ct-sector">Semiconductors</td>
+          <td class="ct-note">Semiconductor and optoelectronics manufacturer expanding capacity, with a large planned public issue ahead.</td>
+          <td class="ct-status">Capex Cycle</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name">Goodluck Defence</td>
+          <td class="ct-sector">Defence &amp; Aerospace</td>
+          <td class="ct-note">Private defence-components manufacturer benefiting from rising indigenous procurement under Make in India.</td>
+          <td class="ct-status">Policy Tailwind</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name">ESDS Software Solutions</td>
+          <td class="ct-sector">Cloud &amp; IT Services</td>
+          <td class="ct-note">Enterprise cloud and data-centre services provider, benefiting from sustained enterprise IT and AI infrastructure spend.</td>
+          <td class="ct-status">Steady Demand</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name">Chennai Super Kings</td>
+          <td class="ct-sector">Sports &amp; Media</td>
+          <td class="ct-note">One of the IPL's most established franchises, held indirectly and long popular among private investors.</td>
+          <td class="ct-status">Retail Favourite</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="disclaimer-box">
+      <span class="eyebrow">Disclosure</span>
+      <p>The names above are informational only and do not constitute an offer, solicitation, or recommendation to buy or sell any security. Unlisted and pre-IPO shares are not traded on a recognised stock exchange, carry higher risk, limited liquidity, and prices are privately negotiated and can vary significantly between sources. Sector tags and notes are drawn from public sources and may change without notice. Please conduct your own due diligence and consult a qualified financial or legal advisor, and read all offer and transfer documents carefully, before making any investment decision. Satvic Capitals Private Limited does not guarantee price, liquidity, or listing timelines for any counter referenced.</p>
+    </div>
+  </div>
+</section>
+
+<section class="research" id="research">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Research</span>
+      <h2>Notes from the desk</h2>
+      <p>Company-specific notes prepared for clients, alongside our general view on how unlisted equity behaves as an asset class.</p>
+    </div>
+
+    <div class="research-grid">
+      <div class="note-card">
+        <div class="note-tag">Company Note</div>
+        <h3>Hinduja Group — Unlisted Coverage</h3>
+        <div class="note-meta">Full note available on request</div>
+        <p class="note-body">Our detailed note on Hinduja Group entities in the unlisted space — covering structure, relevant listed comparables, and what we're watching — is shared directly with enquiring clients rather than published openly. Request a copy through the desk and we'll send it across.</p>
+        <a class="note-cta" href="#contact">Request the full note →</a>
+      </div>
+
+      <div>
+        <div class="ledger-head">
+          <span>The case for</span>
+          <span>The case for caution</span>
+        </div>
+        <div class="ledger">
+          <div class="ledger-row">
+            <div class="ledger-col pro"><span class="lc-label">Earlier exposure</span><p>Entry ahead of the listing cycle<span class="sub">Investors can gain exposure to a business before a public listing re-prices it.</span></p></div>
+            <div class="ledger-col con"><span class="lc-label">Liquidity</span><p>No continuous market<span class="sub">Exiting a position depends on finding a willing counterparty; there is no order book.</span></p></div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-col pro"><span class="lc-label">Diversification</span><p>Lower correlation to index sentiment<span class="sub">Unlisted holdings don't move with daily market-wide swings, which can diversify a broader portfolio.</span></p></div>
+            <div class="ledger-col con"><span class="lc-label">Pricing</span><p>Wider, indicative spreads<span class="sub">Prices are privately negotiated and can vary meaningfully between platforms and desks.</span></p></div>
+          </div>
+          <div class="ledger-row">
+            <div class="ledger-col pro"><span class="lc-label">Scarce access</span><p>Names with no listed equivalent<span class="sub">Some businesses — exchanges, large private groups — simply aren't available any other way.</span></p></div>
+            <div class="ledger-col con"><span class="lc-label">Disclosure</span><p>Lighter reporting standards<span class="sub">Unlisted companies aren't bound by exchange disclosure norms, so information is comparatively thin.</span></p></div>
+          </div>
+          <div class="ledger-row" style="border-bottom:none;">
+            <div class="ledger-col pro"><span class="lc-label">Negotiated entry</span><p>Pricing set by discussion, not momentum<span class="sub">A patient buyer isn't competing against order-book sentiment for their entry price.</span></p></div>
+            <div class="ledger-col con"><span class="lc-label">Time horizon</span><p>No fixed holding period<span class="sub">Many positions are held for years awaiting a listing or strategic sale, with no guaranteed timeline.</span></p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Engagement</span>
+      <h2>From first enquiry to settlement.</h2>
+    </div>
+    <div class="process-row">
+      <div class="p-step"><div class="p-index">01</div><h3>Share your mandate</h3><p>Tell us the counter, size, and timeline over WhatsApp or the desk form.</p></div>
+      <div class="p-step"><div class="p-index">02</div><h3>Receive a working quote</h3><p>An indicative price, lot size, and settlement timeline within 24 hours.</p></div>
+      <div class="p-step"><div class="p-index">03</div><h3>Complete documentation</h3><p>Transfer form and off-market instruction, guided field by field.</p></div>
+      <div class="p-step"><div class="p-index">04</div><h3>Settlement to demat</h3><p>Holdings move off-market directly into your demat account.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div class="contact-side">
+        <span class="eyebrow">Speak With The Desk</span>
+        <h2>Every enquiry is reviewed by a person, not a queue.</h2>
+        <p>Share your mandate through the form and it opens a pre-filled WhatsApp message directly to our desk. Prefer to write it yourself? Use the contact details alongside.</p>
+        <div class="contact-detail">
+          <div class="cd-row"><b>WhatsApp</b><span id="wa-display">+91 XXXXX XXXXX</span></div>
+          <div class="cd-row"><b>Entity</b><span>Satvic Capitals Pvt. Ltd.</span></div>
+          <div class="cd-row"><b>Response window</b><span>Within 24 hours</span></div>
+        </div>
+      </div>
+
+      <form class="contact-form" id="enquiry-form">
+        <div class="field">
+          <label for="f-name">Full name</label>
+          <input id="f-name" type="text" placeholder="Your name" required>
+        </div>
+        <div class="field">
+          <label for="f-phone">Phone number</label>
+          <input id="f-phone" type="tel" placeholder="10-digit mobile number" required>
+        </div>
+        <div class="field">
+          <label for="f-counter">Counter of interest</label>
+          <input id="f-counter" type="text" placeholder="e.g. NSE India, Zepto, OYO...">
+        </div>
+        <div class="field">
+          <label for="f-message">Mandate details</label>
+          <textarea id="f-message" placeholder="Quantity, indicative size, or any question you have"></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Send to the desk on WhatsApp</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg width="24" height="24" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="46" stroke="#B79452" stroke-width="3.5"/><g stroke="#B79452" stroke-width="3.5" stroke-linecap="round"><line x1="50" y1="14" x2="50" y2="30"/><line x1="50" y1="70" x2="50" y2="86"/><line x1="14" y1="50" x2="30" y2="50"/><line x1="70" y1="50" x2="86" y2="50"/></g><circle cx="50" cy="50" r="10" fill="#B79452"/></svg>
+        <span>Satvic Capitals Private Limited</span>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#access">Approach</a>
+        <a href="#counters">Coverage</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+    <p class="fine">Satvic Capitals Private Limited facilitates information-sharing and introductions relating to unlisted and pre-IPO equity. This website is for informational purposes only; nothing on it is investment advice or an offer to transact. Unlisted securities are unregulated by any stock exchange, carry higher risk, and may face liquidity constraints. Please consult your own advisor before investing. © 2026 Satvic Capitals Private Limited. All rights reserved.</p>
+    <p class="fine" style="margin-top:14px;">
+      <a href="privacy-policy.html" style="text-decoration:underline;">Privacy Policy</a> &nbsp;·&nbsp;
+      <a href="terms-of-use.html" style="text-decoration:underline;">Terms of Use</a> &nbsp;·&nbsp;
+      <a href="risk-disclosure.html" style="text-decoration:underline;">Risk Disclosure</a>
+    </p>
+  </div>
+</footer>
+
+<a class="wa-float" id="wa-float" href="#" aria-label="Contact the desk on WhatsApp" target="_blank" rel="noopener">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.2-.7.8-.8.9-.1.2-.3.2-.5.1-.2-.1-1-.4-1.9-1.2-.7-.6-1.2-1.4-1.3-1.6-.1-.2 0-.4.1-.5l.4-.4c.1-.1.2-.3.2-.4.1-.1 0-.3 0-.4 0-.1-.6-1.5-.8-2-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 1.9 0 1.1.8 2.2 1 2.4.1.1 1.7 2.6 4.1 3.6.6.2 1 .4 1.4.5.6.2 1.1.2 1.5.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2-.1-.1-.2-.2-.4-.3Z"/></svg>
+</a>
+
+<script>
+  // ======= EDIT THIS ONE LINE with your real WhatsApp number (country code + number, no + or spaces) =======
+  const WHATSAPP_NUMBER = "919930316782";
+  // ===========================================================================================================
+
+  const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+
+  document.getElementById('wa-float').href = waLink("Hi Satvic Capitals, I'd like to know more about your unlisted share coverage.");
+  document.querySelectorAll('.btn-primary, .nav-cta').forEach(el=>{
+    el.href = waLink("Hi Satvic Capitals, I'd like to request access regarding unlisted / pre-IPO shares.");
+  });
+  document.getElementById('wa-display').textContent = "+" + WHATSAPP_NUMBER.replace(/(\d{2})(\d{5})(\d{5})/, "$1 $2 $3");
+
+  document.getElementById('enquiry-form').addEventListener('submit', function(e){
+    e.preventDefault();
+    const name = document.getElementById('f-name').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    const counter = document.getElementById('f-counter').value.trim();
+    const message = document.getElementById('f-message').value.trim();
+    let text = `Hi Satvic Capitals, I'd like to enquire about unlisted shares.\nName: ${name}\nPhone: ${phone}`;
+    if(counter) text += `\nCounter of interest: ${counter}`;
+    if(message) text += `\nMandate details: ${message}`;
+    window.open(waLink(text), '_blank');
+  });
+</script>
+
+</body>
+</html>
