@@ -149,6 +149,34 @@
     .fact-row span{text-align:left;}
   }
 
+  /* ---------- TAG PILLS (shared) ---------- */
+  .tag-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+  .tag-pill{border:1px solid var(--hair);border-radius:999px;padding:9px 20px;font-size:0.8rem;color:var(--pine-2);background:var(--panel);white-space:nowrap;}
+
+  /* ---------- LEADERSHIP ---------- */
+  .leadership{margin-top:64px;padding-top:56px;border-top:1px solid var(--hair);}
+  .leadership > .eyebrow{display:block;margin-bottom:24px;}
+  .leadership-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;}
+  .director-card{border:1px solid var(--hair);background:var(--panel);padding:32px;}
+  .director-card h3{font-size:1.3rem;font-weight:500;}
+  .director-card .role{font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--brass);margin-top:6px;}
+  .director-card p{font-size:0.9rem;color:var(--slate);line-height:1.7;margin-top:16px;}
+  @media (max-width:820px){.leadership-grid{grid-template-columns:1fr;}}
+
+  /* ---------- ANNOUNCEMENTS ---------- */
+  #announcements{border-bottom:1px solid var(--hair);}
+  .announcement-card{border:1px solid var(--hair);background:var(--panel);padding:48px;margin-top:44px;}
+  .announcement-card > .eyebrow{display:block;margin-bottom:14px;}
+  .announcement-card h3{font-size:2rem;line-height:1.2;font-weight:440;}
+  .announcement-card h3 em{font-style:normal;color:var(--brass);}
+  .announcement-card .ann-sub{color:var(--slate);font-size:1rem;margin-top:12px;}
+  .announcement-card .ann-rule{width:38px;height:2px;background:var(--brass);margin:24px 0;}
+  .announcement-card p{font-size:0.96rem;color:var(--ink);line-height:1.75;margin-top:16px;max-width:760px;}
+  @media (max-width:600px){
+    .announcement-card{padding:28px 22px;}
+    .announcement-card h3{font-size:1.5rem;}
+  }
+
   /* ---------- ACCESS ---------- */
   .access{background:var(--pine-2);color:var(--panel);border-bottom:1px solid var(--hair-light);}
   .access .eyebrow{color:var(--brass-soft);}
@@ -306,6 +334,7 @@
     </div>
     <nav class="links">
       <a href="#about">About</a>
+      <a href="#announcements">Announcements</a>
       <a href="#access">Approach</a>
       <a href="#counters">Coverage</a>
       <a href="#research">Research</a>
@@ -320,6 +349,7 @@
   </div>
   <nav class="mobile-menu" id="mobile-menu">
     <a href="#about">About</a>
+    <a href="#announcements">Announcements</a>
     <a href="#access">Approach</a>
     <a href="#counters">Coverage</a>
     <a href="#research">Research</a>
@@ -380,6 +410,57 @@
         <div class="fact-row"><b>GST No.</b><span>19ABTCS0960J1ZO</span></div>
         <div class="fact-row"><b>Registered Office</b><span>8 Ho Chi Minh Sarani, 1st Floor, C/O Greencove, Kolkata – 700071</span></div>
         <div class="fact-row"><b>Primary Contact</b><span>+91 99303 16782</span></div>
+      </div>
+    </div>
+
+    <div class="leadership">
+      <span class="eyebrow">Leadership</span>
+      <div class="leadership-grid">
+        <div class="director-card">
+          <h3>Saurav Jain</h3>
+          <div class="role">Director</div>
+          <p>Saurav Jain is a Director at Satvic Capitals and co-founder of Finistry, a financial products distribution firm that advises clients based on their individual needs. He holds an MBA from ICFAI Business School, Mumbai, and brings close to 18 years of experience in sales and business development, having managed large-scale P&amp;L and built businesses from the ground up. At Satvic Capitals, Saurav engages with family offices, HNIs, and financial institutions on a range of unlisted opportunities across both domestic and international markets. Beyond markets, Saurav is a Rotarian and a passionate theatre performer, having featured in more than 20 productions as an active member of the Amateur Actors Association. He is based in Kolkata.</p>
+          <div class="tag-row">
+            <span class="tag-pill">Co-founder, Finistry</span>
+            <span class="tag-pill">MBA, ICFAI Business School</span>
+            <span class="tag-pill">18+ Years Experience</span>
+          </div>
+        </div>
+        <div class="director-card">
+          <h3>Manisha Bihani</h3>
+          <div class="role">Director</div>
+          <p>Manisha Bihani is a Director at Satvic Capitals, where she works alongside Saurav Jain to serve the firm's private markets clientele. A Chartered Accountant, Company Secretary, and MBA (Finance) from SCMHRD, she brings over 18 years of experience across equity research, corporate finance, and investor relations, and founded Finistry, a financial products distribution firm that advises clients based on their individual needs. Manisha is a recipient of the Goldman Sachs 10,000 Women Entrepreneurship programme at IIM Ahmedabad. Outside of finance, she is a graduate in singing from Chandigarh University and represented her school at the state level in badminton and at the national level in roller skating.</p>
+          <div class="tag-row">
+            <span class="tag-pill">Chartered Accountant &amp; CS</span>
+            <span class="tag-pill">MBA (Finance), SCMHRD</span>
+            <span class="tag-pill">Goldman Sachs 10KW Alumna</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="announcements">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Announcements</span>
+      <h2>News from Satvic Capitals</h2>
+      <p>Updates on our team, our desk, and how we're building out coverage.</p>
+    </div>
+
+    <div class="announcement-card">
+      <span class="eyebrow">Welcoming a Mentor &amp; Guide</span>
+      <h3>Karthikeyan B <em>joins</em> Satvic Capitals</h3>
+      <div class="ann-sub">as Mentor &amp; Guide</div>
+      <div class="ann-rule"></div>
+      <p>We are delighted to welcome <b>Karthikeyan B</b> to Satvic Capitals. With over two decades shaping India's financial services landscape — across <b>ICICI Bank, Weizmann Forex, SBI Cap Securities, Axis Securities</b> and <b>Web18 Securities</b> — he has led large-scale digital transformation, built industry-defining customer engagement platforms, and directed teams of thousands toward measurable, lasting growth.</p>
+      <p>An alumnus of <b>IIM Lucknow</b> and <b>IIT Madras</b>, and currently Executive Director at Human Ventures, Karthikeyan brings a rare blend of strategic depth and hands-on execution. We are honoured to have his guidance as we continue unlocking private market access for our clients.</p>
+      <div class="tag-row">
+        <span class="tag-pill">Ex-ICICI Bank</span>
+        <span class="tag-pill">Ex-SBI Cap Securities</span>
+        <span class="tag-pill">Ex-Weizmann Forex</span>
+        <span class="tag-pill">IIM Lucknow · IIT Madras</span>
       </div>
     </div>
   </div>
@@ -677,6 +758,7 @@
       </div>
       <div class="footer-links">
         <a href="#about">About</a>
+        <a href="#announcements">Announcements</a>
         <a href="#access">Approach</a>
         <a href="#counters">Coverage</a>
         <a href="#buzz">Buzzing</a>
