@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Satvic Capitals Private Limited | Unlocking Private Market Access</title>
-<meta name="description" content="Satvic Capitals — research-led access to India's unlisted and pre-IPO equity markets for qualified and institutional investors.">
+<meta name="description" content="Satvic Capitals — a trading desk for India's unlisted and pre-IPO equity markets, built for institutional, family office, and UHNI clients.">
 <link rel="canonical" href="https://www.satviccapitals.com/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Satvic Capitals Private Limited">
-<meta property="og:description" content="Unlocking private market access — research-led coverage of India's unlisted and pre-IPO equity for qualified and institutional investors.">
+<meta property="og:description" content="Unlocking private market access — a trading desk for India's unlisted and pre-IPO equity, serving institutional, family office, and UHNI clients.">
 <meta property="og:url" content="https://www.satviccapitals.com/">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#122A22">
@@ -83,7 +83,16 @@
     text-decoration:none;transition:background .2s, color .2s;
   }
   .nav-cta:hover{background:var(--pine);color:var(--panel);}
-  @media (max-width:820px){nav.links{display:none;}}
+  .nav-toggle{display:none;background:none;border:none;padding:6px;cursor:pointer;flex-shrink:0;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--hair);background:var(--panel);}
+  .mobile-menu a{padding:16px 22px;text-decoration:none;color:var(--pine-2);font-size:0.92rem;font-weight:500;border-bottom:1px solid var(--hair);}
+  .mobile-menu a.mm-cta{color:var(--brass);}
+  @media (max-width:820px){
+    nav.links{display:none;}
+    .nav-cta{display:none;}
+    .nav-toggle{display:block;}
+    .mobile-menu.open{display:flex;}
+  }
 
   /* ---------- HERO ---------- */
   .hero{position:relative;overflow:hidden;padding:110px 0 96px;border-bottom:1px solid var(--hair);}
@@ -127,11 +136,18 @@
   /* ---------- ABOUT ---------- */
   .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:64px;margin-top:8px;align-items:start;}
   .about-grid p{font-size:0.98rem;color:var(--slate);line-height:1.75;margin-top:16px;max-width:520px;}
-  .fact-panel{border:1px solid var(--hair);background:var(--panel);}
+  .fact-panel{border:1px solid var(--hair);background:var(--panel);min-width:0;}
   .fact-row{display:flex;justify-content:space-between;gap:16px;padding:18px 24px;border-bottom:1px solid var(--hair);}
   .fact-row:last-child{border-bottom:none;}
-  .fact-row b{font-size:0.8rem;font-weight:500;color:var(--slate);font-family:'IBM Plex Mono',monospace;letter-spacing:0.01em;}
+  .fact-row b{font-size:0.8rem;font-weight:500;color:var(--slate);font-family:'IBM Plex Mono',monospace;letter-spacing:0.01em;flex-shrink:0;}
   .fact-row span{font-size:0.86rem;color:var(--pine-2);font-weight:500;text-align:right;}
+  @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr;gap:36px;}
+  }
+  @media (max-width:600px){
+    .fact-row{flex-direction:column;align-items:flex-start;gap:6px;padding:16px 20px;}
+    .fact-row span{text-align:left;}
+  }
 
   /* ---------- ACCESS ---------- */
   .access{background:var(--pine-2);color:var(--panel);border-bottom:1px solid var(--hair-light);}
@@ -241,7 +257,7 @@
   .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:32px;border-bottom:1px solid var(--hair-light);}
   .footer-brand{display:flex;align-items:center;gap:11px;}
   .footer-brand span{font-family:'Fraunces',serif;color:var(--panel);font-size:1rem;font-weight:440;}
-  .footer-links{display:flex;gap:30px;font-size:0.82rem;}
+  .footer-links{display:flex;flex-wrap:wrap;gap:14px 30px;font-size:0.82rem;}
   .footer-links a{text-decoration:none;color:rgba(252,250,243,0.7);}
   .footer-links a:hover{color:var(--brass-soft);}
   footer .fine{font-size:0.76rem;margin-top:24px;line-height:1.75;color:rgba(252,250,243,0.4);}
@@ -281,7 +297,19 @@
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="#contact">Request Access</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M2 5.5H20M2 11H20M2 16.5H20" stroke="#122A22" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
   </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#access">Approach</a>
+    <a href="#counters">Coverage</a>
+    <a href="#research">Research</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="mm-cta">Request Access</a>
+  </nav>
 </header>
 
 <section class="hero">
@@ -302,9 +330,9 @@
   </svg>
   <div class="wrap">
     <div class="hero-inner">
-      <div class="kicker"><div class="rule"></div><span class="eyebrow">For Qualified &amp; Institutional Investors</span></div>
+      <div class="kicker"><div class="rule"></div><span class="eyebrow">For Institutional, Family Office &amp; UHNI Clients</span></div>
       <h1>Disciplined access to <em>India's private capital markets.</em></h1>
-      <p class="lede">Satvic Capitals is a research desk for unlisted and pre-IPO equity — built for family offices, HNIs, and institutions who require diligence and discretion before they require a quote.</p>
+      <p class="lede">Satvic Capitals is a trading desk for unlisted and pre-IPO equity — built for institutional, family office, and UHNI clients who require diligence and discretion before they require a quote.</p>
       <div class="hero-ctas">
         <a class="btn-primary" href="#contact">Request Access</a>
         <a class="btn-ghost" href="#counters">View Coverage Universe</a>
@@ -325,7 +353,7 @@
       <div>
         <span class="eyebrow">About Satvic Capitals</span>
         <h2 style="font-size:2rem;margin-top:14px;font-weight:440;line-height:1.2;">A focused desk for India's private equity markets.</h2>
-        <p>Satvic Capitals Private Limited facilitates information-sharing and introductions relating to unlisted and pre-IPO equity in India. We maintain research coverage on a working set of actively transacted counters and connect qualified and institutional investors with documented, off-market transfer pathways — supported end to end by a named desk contact rather than an automated platform.</p>
+        <p>Satvic Capitals Private Limited facilitates information-sharing and introductions relating to unlisted and pre-IPO equity in India. We maintain active trading coverage on a working set of actively transacted counters and connect institutional, family office, and UHNI clients with documented, off-market transfer pathways — supported end to end by a named desk contact rather than an automated platform.</p>
       </div>
       <div class="fact-panel">
         <div class="fact-row"><b>Entity</b><span>Satvic Capitals Private Limited</span></div>
@@ -589,10 +617,23 @@
   const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
   document.getElementById('wa-float').href = waLink("Hi Satvic Capitals, I'd like to know more about your unlisted share coverage.");
-  document.querySelectorAll('.btn-primary, .nav-cta').forEach(el=>{
+  document.querySelectorAll('.btn-primary, .nav-cta, .mm-cta').forEach(el=>{
     el.href = waLink("Hi Satvic Capitals, I'd like to request access regarding unlisted / pre-IPO shares.");
   });
   document.getElementById('wa-display').textContent = "+" + WHATSAPP_NUMBER.replace(/(\d{2})(\d{5})(\d{5})/, "$1 $2 $3");
+
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  navToggle.addEventListener('click', function(){
+    const isOpen = mobileMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click', function(){
+      mobileMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 
   document.getElementById('enquiry-form').addEventListener('submit', function(e){
     e.preventDefault();
