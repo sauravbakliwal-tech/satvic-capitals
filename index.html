@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Satvic Capitals Private Limited | Unlocking Private Market Access</title>
-<meta name="description" content="Satvic Capitals — research-led access to India's unlisted and pre-IPO equity markets for qualified and institutional investors.">
+<meta name="description" content="Satvic Capitals — a trading desk for India's unlisted and pre-IPO equity markets, built for institutional, family office, and UHNI clients.">
 <link rel="canonical" href="https://www.satviccapitals.com/">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Satvic Capitals Private Limited">
-<meta property="og:description" content="Unlocking private market access — research-led coverage of India's unlisted and pre-IPO equity for qualified and institutional investors.">
+<meta property="og:description" content="Unlocking private market access — a trading desk for India's unlisted and pre-IPO equity, serving institutional, family office, and UHNI clients.">
 <meta property="og:url" content="https://www.satviccapitals.com/">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#122A22">
@@ -83,7 +83,16 @@
     text-decoration:none;transition:background .2s, color .2s;
   }
   .nav-cta:hover{background:var(--pine);color:var(--panel);}
-  @media (max-width:820px){nav.links{display:none;}}
+  .nav-toggle{display:none;background:none;border:none;padding:6px;cursor:pointer;flex-shrink:0;}
+  .mobile-menu{display:none;flex-direction:column;border-top:1px solid var(--hair);background:var(--panel);}
+  .mobile-menu a{padding:16px 22px;text-decoration:none;color:var(--pine-2);font-size:0.92rem;font-weight:500;border-bottom:1px solid var(--hair);}
+  .mobile-menu a.mm-cta{color:var(--brass);}
+  @media (max-width:820px){
+    nav.links{display:none;}
+    .nav-cta{display:none;}
+    .nav-toggle{display:block;}
+    .mobile-menu.open{display:flex;}
+  }
 
   /* ---------- HERO ---------- */
   .hero{position:relative;overflow:hidden;padding:110px 0 96px;border-bottom:1px solid var(--hair);}
@@ -127,22 +136,30 @@
   /* ---------- ABOUT ---------- */
   .about-grid{display:grid;grid-template-columns:1.2fr 0.8fr;gap:64px;margin-top:8px;align-items:start;}
   .about-grid p{font-size:0.98rem;color:var(--slate);line-height:1.75;margin-top:16px;max-width:520px;}
-  .fact-panel{border:1px solid var(--hair);background:var(--panel);}
+  .fact-panel{border:1px solid var(--hair);background:var(--panel);min-width:0;}
   .fact-row{display:flex;justify-content:space-between;gap:16px;padding:18px 24px;border-bottom:1px solid var(--hair);}
   .fact-row:last-child{border-bottom:none;}
-  .fact-row b{font-size:0.8rem;font-weight:500;color:var(--slate);font-family:'IBM Plex Mono',monospace;letter-spacing:0.01em;}
+  .fact-row b{font-size:0.8rem;font-weight:500;color:var(--slate);font-family:'IBM Plex Mono',monospace;letter-spacing:0.01em;flex-shrink:0;}
   .fact-row span{font-size:0.86rem;color:var(--pine-2);font-weight:500;text-align:right;}
+  @media (max-width:900px){
+    .about-grid{grid-template-columns:1fr;gap:36px;}
+  }
+  @media (max-width:600px){
+    .fact-row{flex-direction:column;align-items:flex-start;gap:6px;padding:16px 20px;}
+    .fact-row span{text-align:left;}
+  }
 
   /* ---------- ACCESS ---------- */
   .access{background:var(--pine-2);color:var(--panel);border-bottom:1px solid var(--hair-light);}
   .access .eyebrow{color:var(--brass-soft);}
   .access h2{color:var(--panel);}
+  .access .section-head p{color:rgba(252,250,243,0.78);}
   .access-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:8px;border-top:1px solid var(--hair-light);}
   .access-card{padding:38px 40px 38px 0;border-right:1px solid var(--hair-light);}
   .access-card:last-child{border-right:none;}
   .access-card .num{font-family:'IBM Plex Mono',monospace;color:var(--brass-soft);font-size:0.72rem;letter-spacing:0.08em;}
   .access-card h3{color:var(--panel);font-size:1.12rem;margin-top:20px;font-weight:500;font-family:'Inter',sans-serif;}
-  .access-card p{color:rgba(252,250,243,0.62);font-size:0.88rem;line-height:1.68;margin-top:12px;}
+  .access-card p{color:rgba(252,250,243,0.78);font-size:0.88rem;line-height:1.68;margin-top:12px;}
   @media (max-width:820px){.access-grid{grid-template-columns:1fr;}.access-card{border-right:none;border-bottom:1px solid var(--hair-light);padding:32px 0;}.access-card:last-child{border-bottom:none;}}
 
   /* ---------- COUNTERS TABLE ---------- */
@@ -196,9 +213,24 @@
   .ledger-col.con .lc-label{color:var(--brass);}
   .ledger-col p{font-size:0.88rem;color:var(--ink);line-height:1.6;margin:0;font-weight:500;}
   .ledger-col span.sub{display:block;font-size:0.82rem;color:var(--slate);font-weight:400;margin-top:4px;line-height:1.55;}
-  .ledger-head{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-bottom:14px;}
-  .ledger-head span{font-family:'Fraunces',serif;font-size:1rem;font-style:italic;color:var(--pine-2);}
-  @media (max-width:900px){.research-grid{grid-template-columns:1fr;gap:40px;}.ledger-row,.ledger-head{grid-template-columns:1fr;gap:14px;}}
+  @media (max-width:900px){.research-grid{grid-template-columns:1fr;gap:40px;}.ledger-row{grid-template-columns:1fr;gap:14px;}}
+
+  /* ---------- BUZZ ---------- */
+  #buzz{border-bottom:1px solid var(--hair);}
+  .buzz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;}
+  .buzz-card{border:1px solid var(--hair);background:var(--panel);padding:28px;display:flex;flex-direction:column;}
+  .buzz-card .buzz-amt{font-family:'Fraunces',serif;font-size:1.6rem;color:var(--pine-2);font-weight:500;}
+  .buzz-card h3{font-size:1.05rem;margin-top:6px;font-weight:500;font-family:'Inter',sans-serif;color:var(--pine-2);}
+  .buzz-card .buzz-tag{font-family:'IBM Plex Mono',monospace;font-size:0.66rem;letter-spacing:0.06em;text-transform:uppercase;color:var(--brass);margin-top:8px;display:block;}
+  .buzz-card p{font-size:0.86rem;color:var(--slate);line-height:1.62;margin-top:14px;flex-grow:1;}
+  .buzz-card .buzz-source{margin-top:16px;font-size:0.76rem;color:var(--pine-2);text-decoration:none;border-bottom:1px solid var(--hair);padding-bottom:2px;align-self:flex-start;}
+  .buzz-card .buzz-source:hover{color:var(--brass);border-color:var(--brass);}
+  .buzz-trends{margin-top:56px;}
+  .buzz-trends h3{font-size:1.2rem;font-weight:500;margin-bottom:8px;}
+  .buzz-note{font-size:0.8rem;color:var(--slate);margin-top:18px;line-height:1.6;}
+  .buzz-note a{color:var(--pine-2);}
+  @media (max-width:900px){.buzz-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:600px){.buzz-grid{grid-template-columns:1fr;}}
 
   /* ---------- PROCESS ---------- */
   .process{background:var(--ivory-2);border-bottom:1px solid var(--hair);}
@@ -241,7 +273,7 @@
   .footer-inner{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:30px;padding-bottom:32px;border-bottom:1px solid var(--hair-light);}
   .footer-brand{display:flex;align-items:center;gap:11px;}
   .footer-brand span{font-family:'Fraunces',serif;color:var(--panel);font-size:1rem;font-weight:440;}
-  .footer-links{display:flex;gap:30px;font-size:0.82rem;}
+  .footer-links{display:flex;flex-wrap:wrap;gap:14px 30px;font-size:0.82rem;}
   .footer-links a{text-decoration:none;color:rgba(252,250,243,0.7);}
   .footer-links a:hover{color:var(--brass-soft);}
   footer .fine{font-size:0.76rem;margin-top:24px;line-height:1.75;color:rgba(252,250,243,0.4);}
@@ -277,11 +309,25 @@
       <a href="#access">Approach</a>
       <a href="#counters">Coverage</a>
       <a href="#research">Research</a>
+      <a href="#buzz">Buzzing</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="#contact">Request Access</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 22 22" fill="none"><path d="M2 5.5H20M2 11H20M2 16.5H20" stroke="#122A22" stroke-width="1.8" stroke-linecap="round"/></svg>
+    </button>
   </div>
+  <nav class="mobile-menu" id="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#access">Approach</a>
+    <a href="#counters">Coverage</a>
+    <a href="#research">Research</a>
+    <a href="#buzz">Buzzing</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="mm-cta">Request Access</a>
+  </nav>
 </header>
 
 <section class="hero">
@@ -302,9 +348,9 @@
   </svg>
   <div class="wrap">
     <div class="hero-inner">
-      <div class="kicker"><div class="rule"></div><span class="eyebrow">For Qualified &amp; Institutional Investors</span></div>
+      <div class="kicker"><div class="rule"></div><span class="eyebrow">For Institutional, Family Office &amp; UHNI Clients</span></div>
       <h1>Disciplined access to <em>India's private capital markets.</em></h1>
-      <p class="lede">Satvic Capitals is a research desk for unlisted and pre-IPO equity — built for family offices, HNIs, and institutions who require diligence and discretion before they require a quote.</p>
+      <p class="lede">Satvic Capitals is a trading desk for unlisted and pre-IPO equity — built for institutional, family office, and UHNI clients who require diligence and discretion before they require a quote.</p>
       <div class="hero-ctas">
         <a class="btn-primary" href="#contact">Request Access</a>
         <a class="btn-ghost" href="#counters">View Coverage Universe</a>
@@ -325,7 +371,7 @@
       <div>
         <span class="eyebrow">About Satvic Capitals</span>
         <h2 style="font-size:2rem;margin-top:14px;font-weight:440;line-height:1.2;">A focused desk for India's private equity markets.</h2>
-        <p>Satvic Capitals Private Limited facilitates information-sharing and introductions relating to unlisted and pre-IPO equity in India. We maintain research coverage on a working set of actively transacted counters and connect qualified and institutional investors with documented, off-market transfer pathways — supported end to end by a named desk contact rather than an automated platform.</p>
+        <p>Satvic Capitals Private Limited facilitates information-sharing and introductions relating to unlisted and pre-IPO equity in India. We maintain active trading coverage on a working set of actively transacted counters and connect institutional, family office, and UHNI clients with documented, off-market transfer pathways — supported end to end by a named desk contact rather than an automated platform.</p>
       </div>
       <div class="fact-panel">
         <div class="fact-row"><b>Entity</b><span>Satvic Capitals Private Limited</span></div>
@@ -471,10 +517,6 @@
       </div>
 
       <div>
-        <div class="ledger-head">
-          <span>The case for</span>
-          <span>The case for caution</span>
-        </div>
         <div class="ledger">
           <div class="ledger-row">
             <div class="ledger-col pro"><span class="lc-label">Earlier exposure</span><p>Entry ahead of the listing cycle<span class="sub">Investors can gain exposure to a business before a public listing re-prices it.</span></p></div>
@@ -494,6 +536,81 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="buzz">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Market Pulse</span>
+      <h2>What's Buzzing!</h2>
+      <p>A running pulse on India's startup and private-market ecosystem — who's raising, who's funding, and where capital is concentrating. Compiled from public reporting by established financial and startup-focused news publications, with source credit and links to the original reporting on every item.</p>
+    </div>
+
+    <div class="buzz-grid">
+      <div class="buzz-card">
+        <span class="buzz-amt">$100M</span>
+        <h3>Pixxel</h3>
+        <span class="buzz-tag">Series C · Spacetech</span>
+        <p>Bengaluru-based spacetech startup raised a $100 million Series C led by Temasek and Seraphim Space, topping the week's funding chart.</p>
+        <a class="buzz-source" href="https://indianstartupnews.com/funding/indian-startups-raised-over-412-million-from-september-7-to-september-12-2026-pixxel-tops-the-list-12528949" target="_blank" rel="noopener">Source: Indian Startup News, 7–12 Sep 2026 →</a>
+      </div>
+      <div class="buzz-card">
+        <span class="buzz-amt">$100M</span>
+        <h3>Slice</h3>
+        <span class="buzz-tag">Fintech</span>
+        <p>Bengaluru-based fintech Slice raised $100 million from Neo Wealth, accounting for roughly a third of that week's total capital raised by Indian startups.</p>
+        <a class="buzz-source" href="https://indianstartupnews.com/funding/indian-startups-raised-over-290-million-from-august-31-to-september-5-2026-slice-tops-the-list-12528919" target="_blank" rel="noopener">Source: Indian Startup News, 31 Aug–5 Sep 2026 →</a>
+      </div>
+      <div class="buzz-card">
+        <span class="buzz-amt">$40M</span>
+        <h3>Flam</h3>
+        <span class="buzz-tag">Series B · AI / Enterprise Content</span>
+        <p>AI-powered interactive content platform Flam raised a Series B led by QED Investors, with participation from RTP Global, Dovetail, and actor Shah Rukh Khan.</p>
+        <a class="buzz-source" href="https://startuptalky.com/news/daily-indian-funding-roundup-key-news-15-september-2026/" target="_blank" rel="noopener">Source: StartupTalky, 15 Sep 2026 →</a>
+      </div>
+      <div class="buzz-card">
+        <span class="buzz-amt">₹200 Cr</span>
+        <h3>QNu Labs</h3>
+        <span class="buzz-tag">Series A1 · Quantum Tech</span>
+        <p>Quantum security startup QNu Labs raised a round co-led by the National Quantum Mission and Speciale Invest, with Sony Innovation Fund, Gaja Capital, and Artha Ventures participating.</p>
+        <a class="buzz-source" href="https://startuptalky.com/news/daily-indian-funding-roundup-key-news-9-september-2026/" target="_blank" rel="noopener">Source: StartupTalky, 9 Sep 2026 →</a>
+      </div>
+      <div class="buzz-card">
+        <span class="buzz-amt">$50M</span>
+        <h3>Nua</h3>
+        <span class="buzz-tag">Series C · Women's Wellness D2C</span>
+        <p>Women's wellness D2C brand Nua raised a $50 million Series C, among the top deals in a week where 24 Indian startups together raised over $412 million.</p>
+        <a class="buzz-source" href="https://indianstartupnews.com/funding/indian-startups-raised-over-412-million-from-september-7-to-september-12-2026-pixxel-tops-the-list-12528949" target="_blank" rel="noopener">Source: Indian Startup News, 7–12 Sep 2026 →</a>
+      </div>
+      <div class="buzz-card">
+        <span class="buzz-amt">SEBI</span>
+        <h3>Fibe IPO Cleared</h3>
+        <span class="buzz-tag">Regulatory · Lending-Tech</span>
+        <p>SEBI gave the green light to lending-tech startup Fibe's IPO of over ₹750 crore, part of a steady pipeline of new-age listings moving through regulatory review.</p>
+        <a class="buzz-source" href="https://startuptalky.com/news/daily-indian-funding-roundup-key-news-15-september-2026/" target="_blank" rel="noopener">Source: StartupTalky, 15 Sep 2026 →</a>
+      </div>
+    </div>
+
+    <div class="buzz-trends">
+      <h3>Where the capital is concentrating</h3>
+      <div class="ledger">
+        <div class="ledger-row">
+          <div class="ledger-col pro"><span class="lc-label">Applied AI</span><p>Workflow &amp; industry-specific tools<span class="sub">Investors are backing practical AI applications in sales, operations, and vertical workflows — not the "AI" label alone.</span></p></div>
+          <div class="ledger-col con"><span class="lc-label">Generalist Early-Stage</span><p>A harder ask for broad, undifferentiated bets<span class="sub">Capital is concentrating in mega-rounds for proven players and specialised niches, leaving generic early-stage pitches a tougher sell.</span></p></div>
+        </div>
+        <div class="ledger-row" style="border-bottom:none;">
+          <div class="ledger-col pro"><span class="lc-label">EV, Deep Tech &amp; Spacetech</span><p>Large cheques for hardware and frontier bets<span class="sub">Mobility, battery tech, and spacetech names drew some of the period's biggest rounds.</span></p></div>
+          <div class="ledger-col con"><span class="lc-label">Overall Deal Pace</span><p>Fewer rounds, bigger cheques<span class="sub">India's 2026 market is running fewer equity rounds overall, with capital concentrated in larger, later-stage deals.</span></p></div>
+        </div>
+      </div>
+      <p class="buzz-note">Trend synthesis based on reporting by <a href="https://www.newskart.com/india-startup-funding-update-from-august-10-to-september-4-2026-big-cheques-ai-bets-and-founders-to-watch/" target="_blank" rel="noopener">Newskart</a> (10 Aug–4 Sep 2026).</p>
+    </div>
+
+    <div class="disclaimer-box">
+      <span class="eyebrow">Disclosure</span>
+      <p>"What's Buzzing" is a curated digest of publicly reported startup and private-market news, compiled from third-party financial and startup media for general information only. It is not Satvic Capitals' own research, investment advice, or a recommendation, and Satvic Capitals Private Limited does not verify, endorse, or guarantee the accuracy of the underlying figures. Each item is credited and linked to its original source — please refer to that reporting for the fullest and most current detail. This digest is updated periodically and may not reflect the latest developments.</p>
     </div>
   </div>
 </section>
@@ -562,6 +679,7 @@
         <a href="#about">About</a>
         <a href="#access">Approach</a>
         <a href="#counters">Coverage</a>
+        <a href="#buzz">Buzzing</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
         <a href="https://chat.whatsapp.com/BEzpzrJrCe54H1pr2qEAHi?mode=gi_t" target="_blank" rel="noopener">Join Our Community</a>
@@ -589,10 +707,23 @@
   const waLink = (text) => `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
   document.getElementById('wa-float').href = waLink("Hi Satvic Capitals, I'd like to know more about your unlisted share coverage.");
-  document.querySelectorAll('.btn-primary, .nav-cta').forEach(el=>{
+  document.querySelectorAll('.btn-primary, .nav-cta, .mm-cta').forEach(el=>{
     el.href = waLink("Hi Satvic Capitals, I'd like to request access regarding unlisted / pre-IPO shares.");
   });
   document.getElementById('wa-display').textContent = "+" + WHATSAPP_NUMBER.replace(/(\d{2})(\d{5})(\d{5})/, "$1 $2 $3");
+
+  const navToggle = document.getElementById('nav-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  navToggle.addEventListener('click', function(){
+    const isOpen = mobileMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mobileMenu.querySelectorAll('a').forEach(link=>{
+    link.addEventListener('click', function(){
+      mobileMenu.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 
   document.getElementById('enquiry-form').addEventListener('submit', function(e){
     e.preventDefault();
