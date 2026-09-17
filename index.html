@@ -74,7 +74,7 @@
   .brand-text{line-height:1.1;}
   .brand-text .name{font-family:'Fraunces',serif;font-size:1.02rem;color:var(--pine-2);letter-spacing:-0.01em;}
   .brand-text .sub{font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--slate);}
-  nav.links{display:flex;gap:38px;font-size:0.82rem;font-weight:500;letter-spacing:0.01em;}
+  nav.links{display:flex;gap:22px;font-size:0.78rem;font-weight:500;letter-spacing:0.01em;white-space:nowrap;}
   nav.links a{opacity:0.72;transition:opacity .2s;text-decoration:none;}
   nav.links a:hover{opacity:1;}
   .nav-cta{
@@ -177,6 +177,22 @@
     .announcement-card h3{font-size:1.5rem;}
   }
 
+  /* ---------- MEDIA COVERAGE ---------- */
+  #media{border-bottom:1px solid var(--hair);}
+  .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px;}
+  .media-card{border:1px solid var(--hair);background:var(--panel);padding:28px;display:flex;flex-direction:column;}
+  .media-card .media-pub{font-family:'IBM Plex Mono',monospace;font-size:0.68rem;letter-spacing:0.08em;text-transform:uppercase;color:var(--brass);}
+  .media-card .media-date{font-family:'IBM Plex Mono',monospace;font-size:0.72rem;color:var(--slate);margin-top:6px;}
+  .media-card h3{font-size:1.12rem;margin-top:14px;font-weight:500;font-family:'Inter',sans-serif;color:var(--pine-2);line-height:1.35;}
+  .media-card p{font-size:0.86rem;color:var(--slate);line-height:1.62;margin-top:14px;flex-grow:1;}
+  .media-card .media-link{
+    margin-top:16px;font-size:0.8rem;font-weight:500;color:var(--pine-2);text-decoration:none;
+    border-bottom:1px solid var(--hair);padding-bottom:2px;align-self:flex-start;
+  }
+  .media-card .media-link:hover{color:var(--brass);border-color:var(--brass);}
+  @media (max-width:900px){.media-grid{grid-template-columns:1fr 1fr;}}
+  @media (max-width:600px){.media-grid{grid-template-columns:1fr;}}
+
   /* ---------- ACCESS ---------- */
   .access{background:var(--pine-2);color:var(--panel);border-bottom:1px solid var(--hair-light);}
   .access .eyebrow{color:var(--brass-soft);}
@@ -200,12 +216,20 @@
   .counter-table tbody tr{border-bottom:1px solid var(--hair);transition:background .15s;}
   .counter-table tbody tr:hover{background:rgba(18,42,34,0.03);}
   .counter-table td{padding:22px 16px 22px 0;vertical-align:top;}
-  .ct-name{font-family:'Fraunces',serif;font-size:1.06rem;color:var(--pine-2);font-weight:500;white-space:nowrap;}
+  .ct-name{font-family:'Fraunces',serif;font-size:1.06rem;color:var(--pine-2);font-weight:500;white-space:nowrap;display:flex;align-items:center;gap:12px;}
+  .ct-logo{width:26px;height:26px;object-fit:contain;flex-shrink:0;}
+  .ct-logo-fallback{
+    width:26px;height:26px;border-radius:50%;background:var(--ivory-2);color:var(--pine-2);
+    font-family:'IBM Plex Mono',monospace;font-size:0.6rem;font-weight:700;letter-spacing:0.01em;
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;
+  }
   .ct-sector{font-size:0.78rem;color:var(--slate);font-family:'IBM Plex Mono',monospace;letter-spacing:0.02em;white-space:nowrap;}
   .ct-note{font-size:0.88rem;color:var(--slate);line-height:1.6;max-width:420px;}
   .ct-status{font-size:0.68rem;font-family:'IBM Plex Mono',monospace;letter-spacing:0.06em;text-transform:uppercase;color:var(--brass);white-space:nowrap;}
+  .ct-status.exclusive{background:var(--pine-2);color:var(--panel);padding:5px 10px;border-radius:999px;display:inline-block;}
   .ct-link{font-size:0.8rem;font-weight:500;color:var(--pine-2);text-decoration:none;border-bottom:1px solid var(--hair);white-space:nowrap;}
   .ct-link:hover{color:var(--brass);border-color:var(--brass);}
+  .mandate-note{font-size:0.84rem;color:var(--slate);font-style:italic;margin-top:14px;}
   @media (max-width:900px){
     .counter-table thead{display:none;}
     .counter-table, .counter-table tbody, .counter-table tr, .counter-table td{display:block;width:100%;}
@@ -335,9 +359,9 @@
     <nav class="links">
       <a href="#about">About</a>
       <a href="#announcements">Announcements</a>
+      <a href="#media">Media</a>
       <a href="#access">Approach</a>
-      <a href="#counters">Coverage</a>
-      <a href="#research">Research</a>
+      <a href="#counters">Counters</a>
       <a href="#buzz">Buzzing</a>
       <a href="#process">Process</a>
       <a href="#contact">Contact</a>
@@ -350,9 +374,9 @@
   <nav class="mobile-menu" id="mobile-menu">
     <a href="#about">About</a>
     <a href="#announcements">Announcements</a>
+    <a href="#media">Media Coverage</a>
     <a href="#access">Approach</a>
-    <a href="#counters">Coverage</a>
-    <a href="#research">Research</a>
+    <a href="#counters">Active Counters</a>
     <a href="#buzz">Buzzing</a>
     <a href="#process">Process</a>
     <a href="#contact">Contact</a>
@@ -383,7 +407,7 @@
       <p class="lede">Satvic Capitals is a trading desk for unlisted and pre-IPO equity — built for institutional, family office, and UHNI clients who require diligence and discretion before they require a quote.</p>
       <div class="hero-ctas">
         <a class="btn-primary" href="#contact">Request Access</a>
-        <a class="btn-ghost" href="#counters">View Coverage Universe</a>
+        <a class="btn-ghost" href="#counters">View Active Counters</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><b>25+</b><span>Counters under coverage</span></div>
@@ -466,6 +490,40 @@
   </div>
 </section>
 
+<section id="media">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Media Coverage</span>
+      <h2>Satvic Capitals &amp; Finistry in the press</h2>
+      <p>Coverage of Finistry — the financial products distribution firm co-founded by our directors, Saurav Jain and Manisha Bihani — from independent publications. Credited and linked to the original reporting.</p>
+    </div>
+
+    <div class="media-grid">
+      <div class="media-card">
+        <span class="media-pub">Hindustan Metro</span>
+        <span class="media-date">17 July 2025</span>
+        <h3>Finistry: Where Financial Patience Meets Purposeful Prosperity</h3>
+        <p>A feature on Finistry's patient, long-term approach to wealth creation and its ethos that "growth is a process, not an event."</p>
+        <a class="media-link" href="https://www.hindustanmetro.com/finistry-where-financial-patience-meets-purposeful-prosperity" target="_blank" rel="noopener">Read the feature →</a>
+      </div>
+      <div class="media-card">
+        <span class="media-pub">The Daily Beat</span>
+        <span class="media-date">21 July 2025</span>
+        <h3>Finistry Redefines Wealth Creation Through Patience, Purpose, and Personalized Financial Strategy</h3>
+        <p>Profiles Finistry's Kolkata-based, relationship-driven approach to mutual funds, portfolio management, and unlisted equity access.</p>
+        <a class="media-link" href="https://www.thedailybeat.in/finistry-redefines-wealth-creation-through-patience-purpose-and-personalized-financial-strategy" target="_blank" rel="noopener">Read the feature →</a>
+      </div>
+      <div class="media-card">
+        <span class="media-pub">Fox Story India</span>
+        <span class="media-date">4 August 2025</span>
+        <h3>Finistry Emerges as a National Leader in Purpose-Led Wealth Management</h3>
+        <p>Covers Finistry's growth into a national wealth-management practice built on long-term vision and relationship-driven strategy.</p>
+        <a class="media-link" href="https://foxstoryindia.com/2025/08/04/finistry-emerges-as-a-national-leader-in-purpose-led-wealth-management/" target="_blank" rel="noopener">Read the feature →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="access" id="access">
   <div class="wrap">
     <div class="section-head">
@@ -497,9 +555,10 @@
   <div class="wrap">
     <div class="head-row">
       <div class="section-head" style="margin-bottom:0;">
-        <span class="eyebrow">Coverage Universe</span>
-        <h2>Selected unlisted &amp; pre-IPO counters</h2>
-        <p>A working shortlist maintained from India's leading unlisted-share platforms and deal desks. Notes below are informational — see the disclosure beneath the table before acting on any of them.</p>
+        <span class="eyebrow">Active Counters</span>
+        <h2>Currently offering</h2>
+        <p>A working shortlist of unlisted &amp; pre-IPO counters we're actively transacting in, alongside two names available exclusively through our desk. Notes below are informational — see the disclosure beneath the table before acting on any of them.</p>
+        <p class="mandate-note">All offerings are subject to mandates from buyer and seller.</p>
       </div>
     </div>
 
@@ -515,17 +574,59 @@
       </thead>
       <tbody>
         <tr>
-          <td class="ct-name">NSE India Ltd.</td>
-          <td class="ct-sector">Market Infra</td>
-          <td class="ct-note">India's largest exchange operator; one of the most consistently traded unlisted counters, kept in focus by recurring listing speculation.</td>
+          <td class="ct-name"><img class="ct-logo" src="assets/logos/chargezone.svg" alt=""> ChargeZone</td>
+          <td class="ct-sector">EV Infrastructure</td>
+          <td class="ct-note">India's largest EV charging network, backed by BlueOrchard and Macquarie. Available exclusively through Satvic Capitals.</td>
+          <td><span class="ct-status exclusive">Exclusive</span></td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name"><img class="ct-logo" src="assets/logos/isg.png" alt=""> In-Solutions Global (ISG)</td>
+          <td class="ct-sector">Fintech &amp; Payments</td>
+          <td class="ct-note">RBI-licensed payments and Payments-as-a-Service provider, processing 28+ billion transactions annually. Available exclusively through Satvic Capitals.</td>
+          <td><span class="ct-status exclusive">Exclusive</span></td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name"><img class="ct-logo" src="assets/logos/api-holdings.png" alt=""> API Holdings (PharmEasy)</td>
+          <td class="ct-sector">Healthtech &amp; Pharma</td>
+          <td class="ct-note">Parent entity of PharmEasy, India's digital healthcare and online pharmacy platform.</td>
           <td class="ct-status">Widely Held</td>
           <td><a class="ct-link" href="#contact">Request note →</a></td>
         </tr>
         <tr>
-          <td class="ct-name">Metropolitan Stock Exchange</td>
+          <td class="ct-name"><img class="ct-logo" src="assets/logos/oyo.png" alt=""> Oravel Stays (OYO)</td>
+          <td class="ct-sector">Hospitality</td>
+          <td class="ct-note">Hospitality-technology platform that has remained on unlisted watchlists for several years as a recurring listing candidate.</td>
+          <td class="ct-status">Long-Tracked</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name"><span class="ct-logo-fallback">SP</span> Sunday Proptech (OYO Assets)</td>
+          <td class="ct-sector">Hospitality Real Estate</td>
+          <td class="ct-note">Hotel-asset ownership arm of the OYO group, operating properties under the Sunday and Townhouse brands.</td>
+          <td class="ct-status">Recently Funded</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name"><span class="ct-logo-fallback">CSK</span> Chennai Super Kings</td>
+          <td class="ct-sector">Sports &amp; Media</td>
+          <td class="ct-note">One of the IPL's most established franchises, held indirectly and long popular among private investors.</td>
+          <td class="ct-status">Retail Favourite</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name"><img class="ct-logo" src="assets/logos/msei.svg" alt=""> Metropolitan Stock Exchange (MSEI)</td>
           <td class="ct-sector">Market Infra</td>
           <td class="ct-note">India's third recognised exchange. Renewed interest follows recent capital-market reform and governance changes.</td>
           <td class="ct-status">Reform-Linked</td>
+          <td><a class="ct-link" href="#contact">Request note →</a></td>
+        </tr>
+        <tr>
+          <td class="ct-name"><img class="ct-logo" src="assets/logos/ncdex.jpg" alt=""> NCDEX</td>
+          <td class="ct-sector">Commodities &amp; Derivatives</td>
+          <td class="ct-note">India's leading agricultural-commodity derivatives exchange, regulated by SEBI.</td>
+          <td class="ct-status">Steady Demand</td>
           <td><a class="ct-link" href="#contact">Request note →</a></td>
         </tr>
         <tr>
@@ -533,13 +634,6 @@
           <td class="ct-sector">Consumer Tech</td>
           <td class="ct-note">Quick-commerce major with global institutional backing, closely tracked ahead of an anticipated public listing.</td>
           <td class="ct-status">Pre-IPO</td>
-          <td><a class="ct-link" href="#contact">Request note →</a></td>
-        </tr>
-        <tr>
-          <td class="ct-name">Oravel Stays (OYO)</td>
-          <td class="ct-sector">Hospitality</td>
-          <td class="ct-note">Hospitality-technology platform that has remained on unlisted watchlists for several years as a recurring listing candidate.</td>
-          <td class="ct-status">Long-Tracked</td>
           <td><a class="ct-link" href="#contact">Request note →</a></td>
         </tr>
         <tr>
@@ -556,64 +650,46 @@
           <td class="ct-status">Policy Tailwind</td>
           <td><a class="ct-link" href="#contact">Request note →</a></td>
         </tr>
-        <tr>
-          <td class="ct-name">ESDS Software Solutions</td>
-          <td class="ct-sector">Cloud &amp; IT Services</td>
-          <td class="ct-note">Enterprise cloud and data-centre services provider, benefiting from sustained enterprise IT and AI infrastructure spend.</td>
-          <td class="ct-status">Steady Demand</td>
-          <td><a class="ct-link" href="#contact">Request note →</a></td>
-        </tr>
-        <tr>
-          <td class="ct-name">Chennai Super Kings</td>
-          <td class="ct-sector">Sports &amp; Media</td>
-          <td class="ct-note">One of the IPL's most established franchises, held indirectly and long popular among private investors.</td>
-          <td class="ct-status">Retail Favourite</td>
-          <td><a class="ct-link" href="#contact">Request note →</a></td>
-        </tr>
       </tbody>
     </table>
 
     <div class="disclaimer-box">
       <span class="eyebrow">Disclosure</span>
-      <p>The names above are informational only and do not constitute an offer, solicitation, or recommendation to buy or sell any security. Unlisted and pre-IPO shares are not traded on a recognised stock exchange, carry higher risk, limited liquidity, and prices are privately negotiated and can vary significantly between sources. Sector tags and notes are drawn from public sources and may change without notice. Please conduct your own due diligence and consult a qualified financial or legal advisor, and read all offer and transfer documents carefully, before making any investment decision. Satvic Capitals Private Limited does not guarantee price, liquidity, or listing timelines for any counter referenced.</p>
-    </div>
-  </div>
-</section>
-
-<section class="research" id="research">
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow">Research</span>
-      <h2>Notes from the desk</h2>
-      <p>Company-specific notes prepared for clients, alongside our general view on how unlisted equity behaves as an asset class.</p>
+      <p>The names above are informational only and do not constitute an offer, solicitation, or recommendation to buy or sell any security. Unlisted and pre-IPO shares are not traded on a recognised stock exchange, carry higher risk, limited liquidity, and prices are privately negotiated and can vary significantly between sources. All offerings are subject to mandates from buyer and seller and may be withdrawn or amended without notice. Sector tags and notes are drawn from public sources and may change without notice. Please conduct your own due diligence and consult a qualified financial or legal advisor, and read all offer and transfer documents carefully, before making any investment decision. Satvic Capitals Private Limited does not guarantee price, liquidity, or listing timelines for any counter referenced.</p>
     </div>
 
-    <div class="research-grid">
-      <div class="note-card">
-        <div class="note-tag">Company Note</div>
-        <h3>Hinduja Group — Unlisted Coverage</h3>
-        <div class="note-meta">Full note available on request</div>
-        <p class="note-body">Our detailed note on Hinduja Group entities in the unlisted space — covering structure, relevant listed comparables, and what we're watching — is shared directly with enquiring clients rather than published openly. Request a copy through the desk and we'll send it across.</p>
-        <a class="note-cta" href="#contact">Request the full note →</a>
-      </div>
+    <div style="margin-top:64px;padding-top:56px;border-top:1px solid var(--hair);">
+      <span class="eyebrow">From The Desk</span>
+      <h3 style="font-size:1.6rem;margin-top:12px;font-weight:440;">Notes on the counters above</h3>
+      <p style="color:var(--slate);margin-top:14px;line-height:1.68;font-size:0.96rem;max-width:640px;">Company-specific notes prepared for clients, alongside our general view on how unlisted equity behaves as an asset class.</p>
 
-      <div>
-        <div class="ledger">
-          <div class="ledger-row">
-            <div class="ledger-col pro"><span class="lc-label">Earlier exposure</span><p>Entry ahead of the listing cycle<span class="sub">Investors can gain exposure to a business before a public listing re-prices it.</span></p></div>
-            <div class="ledger-col con"><span class="lc-label">Liquidity</span><p>No continuous market<span class="sub">Exiting a position depends on finding a willing counterparty; there is no order book.</span></p></div>
-          </div>
-          <div class="ledger-row">
-            <div class="ledger-col pro"><span class="lc-label">Diversification</span><p>Lower correlation to index sentiment<span class="sub">Unlisted holdings don't move with daily market-wide swings, which can diversify a broader portfolio.</span></p></div>
-            <div class="ledger-col con"><span class="lc-label">Pricing</span><p>Wider, indicative spreads<span class="sub">Prices are privately negotiated and can vary meaningfully between platforms and desks.</span></p></div>
-          </div>
-          <div class="ledger-row">
-            <div class="ledger-col pro"><span class="lc-label">Scarce access</span><p>Names with no listed equivalent<span class="sub">Some businesses — exchanges, large private groups — simply aren't available any other way.</span></p></div>
-            <div class="ledger-col con"><span class="lc-label">Disclosure</span><p>Lighter reporting standards<span class="sub">Unlisted companies aren't bound by exchange disclosure norms, so information is comparatively thin.</span></p></div>
-          </div>
-          <div class="ledger-row" style="border-bottom:none;">
-            <div class="ledger-col pro"><span class="lc-label">Negotiated entry</span><p>Pricing set by discussion, not momentum<span class="sub">A patient buyer isn't competing against order-book sentiment for their entry price.</span></p></div>
-            <div class="ledger-col con"><span class="lc-label">Time horizon</span><p>No fixed holding period<span class="sub">Many positions are held for years awaiting a listing or strategic sale, with no guaranteed timeline.</span></p></div>
+      <div class="research-grid" style="margin-top:36px;">
+        <div class="note-card">
+          <div class="note-tag">Company Note</div>
+          <h3>Hinduja Group — Unlisted Coverage</h3>
+          <div class="note-meta">Full note available on request</div>
+          <p class="note-body">Our detailed note on Hinduja Group entities in the unlisted space — covering structure, relevant listed comparables, and what we're watching — is shared directly with enquiring clients rather than published openly. Request a copy through the desk and we'll send it across.</p>
+          <a class="note-cta" href="#contact">Request the full note →</a>
+        </div>
+
+        <div>
+          <div class="ledger">
+            <div class="ledger-row">
+              <div class="ledger-col pro"><span class="lc-label">Earlier exposure</span><p>Entry ahead of the listing cycle<span class="sub">Investors can gain exposure to a business before a public listing re-prices it.</span></p></div>
+              <div class="ledger-col con"><span class="lc-label">Liquidity</span><p>No continuous market<span class="sub">Exiting a position depends on finding a willing counterparty; there is no order book.</span></p></div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-col pro"><span class="lc-label">Diversification</span><p>Lower correlation to index sentiment<span class="sub">Unlisted holdings don't move with daily market-wide swings, which can diversify a broader portfolio.</span></p></div>
+              <div class="ledger-col con"><span class="lc-label">Pricing</span><p>Wider, indicative spreads<span class="sub">Prices are privately negotiated and can vary meaningfully between platforms and desks.</span></p></div>
+            </div>
+            <div class="ledger-row">
+              <div class="ledger-col pro"><span class="lc-label">Scarce access</span><p>Names with no listed equivalent<span class="sub">Some businesses — exchanges, large private groups — simply aren't available any other way.</span></p></div>
+              <div class="ledger-col con"><span class="lc-label">Disclosure</span><p>Lighter reporting standards<span class="sub">Unlisted companies aren't bound by exchange disclosure norms, so information is comparatively thin.</span></p></div>
+            </div>
+            <div class="ledger-row" style="border-bottom:none;">
+              <div class="ledger-col pro"><span class="lc-label">Negotiated entry</span><p>Pricing set by discussion, not momentum<span class="sub">A patient buyer isn't competing against order-book sentiment for their entry price.</span></p></div>
+              <div class="ledger-col con"><span class="lc-label">Time horizon</span><p>No fixed holding period<span class="sub">Many positions are held for years awaiting a listing or strategic sale, with no guaranteed timeline.</span></p></div>
+            </div>
           </div>
         </div>
       </div>
@@ -737,7 +813,7 @@
         </div>
         <div class="field">
           <label for="f-counter">Counter of interest</label>
-          <input id="f-counter" type="text" placeholder="e.g. NSE India, Zepto, OYO...">
+          <input id="f-counter" type="text" placeholder="e.g. ChargeZone, Zepto, OYO...">
         </div>
         <div class="field">
           <label for="f-message">Mandate details</label>
@@ -759,8 +835,9 @@
       <div class="footer-links">
         <a href="#about">About</a>
         <a href="#announcements">Announcements</a>
+        <a href="#media">Media Coverage</a>
         <a href="#access">Approach</a>
-        <a href="#counters">Coverage</a>
+        <a href="#counters">Active Counters</a>
         <a href="#buzz">Buzzing</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
